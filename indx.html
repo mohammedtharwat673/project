@@ -1,0 +1,77 @@
+
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Quote </title>
+    <style>
+        body {
+            background-image: url(images/workplace-with-smartphone-laptop-black-table-top-view-copyspace-background.jpg); 
+            background-size: cover; 
+            color: #fff;
+            
+            text-align: center;
+            font-size: 24px;
+        }
+
+        #quoteDisplay {
+            margin: 20px 0;
+        }
+        
+        h1{
+            font-family:var(--mainfont) ;
+        }
+
+        p{
+            font-family:var(--defaultfont) ;
+            color: #fff;
+        }
+
+
+
+        button {
+            background-color: #1d0dc9;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            font-family: var(--defaultfont);
+
+        
+        }
+        button:hover{
+            background-color: rgb(145, 15, 15);
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Quote of the Day</h1>
+    <p>Press the button below to receive a random quote!</p>
+    <button onclick="generateQuote()">Get Quote</button>
+    <p id="quoteDisplay"></p>
+
+    <script>
+        var quotes = [
+            "The only limit to our realization of tomorrow will be our doubts of today. - Franklin D. Roosevelt",
+            "Life is what happens when you're busy making other plans. - John Lennon",
+            "The way to get started is to quit talking and begin doing. - Walt Disney",
+            "Believe you can and you're halfway there. - Theodore Roosevelt",
+            "It always seems impossible until it's done. - Nelson Mandela"
+        ];
+
+        function generateQuote() {
+            var randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById("quoteDisplay").innerHTML = quotes[randomIndex];
+        }
+    </script>
+</body>
+</html> 
+
+
+
+
+
